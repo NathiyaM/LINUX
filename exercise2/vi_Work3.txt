@@ -1,0 +1,22 @@
+1	What is an IRQ?
+2	
+3	An IRQ is an interrupt request from a device.
+4	Currently they can come in over a pin, or over a packet.
+5	Several devices may be connected to the same pin thus
+6	sharing an IRQ.
+7	
+8	An IRQ number is a kernel identifier used to talk about a hardware
+9	interrupt source.  Typically this is an index into the global irq_desc
+10	array, but except for what linux/interrupt.h implements the details
+11	are architecture specific.
+12	
+13	An IRQ number is an enumeration of the possible interrupt sources on a
+14	machine.  Typically what is enumerated is the number of input pins on
+15	all of the interrupt controller in the system.  In the case of ISA
+16	what is enumerated are the 16 input pins on the two i8259 interrupt
+17	controllers.
+18	
+19	Architectures can assign additional meaning to the IRQ numbers, and
+20	are encouraged to in the case  where there is any manual configuration
+21	of the hardware involved.  The ISA IRQs are a classic example of
+22	assigning this kind of additional meaning.

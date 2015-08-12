@@ -1,0 +1,2467 @@
+Script started on Fri Jul  3 00:36:29 2015
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ ls -ad .*
+[0m[01;34m.[0m  [01;34m..[0m  .Xauthority  .bash_history  .bash_logout  .bashrc  [01;34m.ipython[0m  .profile  [01;34m.pulse[0m  .viminfo  .xscreensaver
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ cat .profile
+# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+# exists.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
+
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+#umask 022
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ env
+TERM=xterm
+SHELL=/bin/bash
+XDG_SESSION_COOKIE=a6b71045ad9ffa19950b65f000000b5d-1435908809.239904-573750467
+USER=nathiya
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+MAIL=/var/mail/nathiya
+PWD=/home/nathiya
+HOME=/home/nathiya
+SHLVL=2
+LOGNAME=nathiya
+LESSOPEN=| /usr/bin/lesspipe %s
+LESSCLOSE=/usr/bin/lesspipe %s %s
+_=/usr/bin/env
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ echo $HOSTNAME
+localhost
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ echo $HOSTNAME        SHELL
+/bin/bash
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ l alias ls =  ='ls -iR'
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ ls
+.:
+260113 Downloads  139792 c  132322 exercise2  130057 exercise_1  146134 exercise_3  130567 intro2linux
+
+./Downloads:
+268622 cprog.c	269176 exercise_1  268933 vi_Work1.txt	270742 vi_Work3.txt
+263075 crouton	265742 hello.c	   270741 vi_Work2.txt	268885 wmpChrome.crx
+
+./c:
+146404 GuessNumber.c  145636 a.out  146383 helloworld.c
+
+./exercise2:
+145368 dir.log	131316 exercise_2  145634 mylog  138533 myname.txt  135341 vi_Work1.txt  136043 vi_Work2.txt  137306 vi_Work3.txt  136043 vi_mywork2
+
+./intro2linux:
+130609 homework1  139242 vi_Work1.txt
+
+./intro2linux/homework1:
+146409 exercise_1
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ unalias ls
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ history
+    1  xmodmap -e "keycode 94 shift = backslash bar"
+    2  xmodmap 
+    3  ls
+    4  pwd
+    5  python -v
+    6  python -V
+    7  sudo apt-get update
+    8  sudo apt-get install ipython-notebook
+    9  vim
+   10  vi
+   11  xmodmap 
+   12  xmodmap -e "keycode 94 shift = backslash bar"
+   13  vim
+   14  vi
+   15  sudo apt-get install vim
+   16  vim
+   17  vim hi
+   18  ipython
+   19  exit
+   20  pwd
+   21  mkdir intro2linux
+   22  cd intro2linux
+   23  mkdir homework1 temp
+   24  ls
+   25  cp ~/Downloads/vi_Work1.txt ~/intro2linux
+   26  ls
+   27  cp vi_Work1.txt homework1/
+   28  cp /etc/fstab /etc/passwd homework1/
+   29  mv homework1/passwd homework1/mypasswd
+   30  cp homework1/mypasswd homework1/fstab homework1/vi_Work1.txt temp/
+   31  ls homework1 temp
+   32  mv temp/vi_Work1.txt temp/vi_test
+   33  cp temp/vi_test homework1/
+   34  cd temp
+   35  ls ~/intro2linux/homework1
+   36  cd ..
+   37  rm temp
+   38  cd temp
+   39  rm fstab mypasswd vi_Work1.txt
+   40  rm fstab mypasswd vi_test
+   41  cd ..
+   42  rm temp
+   43  rm -r temp
+   44  ls
+   45  cd homework1
+   46  ls
+   47  ls -l
+   48  ls -lh
+   49  wc -wcm mypasswd
+   50  wc -wcm 
+   51  wc -wcm homework1
+   52  wc -wcm ~/intro2linux/homework1
+   53  wc .*
+   54  wc . *
+   55  wc -wcm .*
+   56  wc -wcm . *
+   57  rm -r homework1
+   58  rm -r
+   59  ls
+   60  rm fstab mypasswd vi_Work1.txt vi_test
+   61  ls
+   62  cd ~
+   63  ls -a
+   64  pwd
+   65  ls -a intro2linux/homework2
+   66  ls -a intro2linux/homework1
+   67  exit
+   68  pwd
+   69  mkdir intro2linux
+   70  cd intro2linux
+   71  pwd
+   72  mkdir homework1 temp
+   73  ls
+   74  cp ~/Downloads/vi_Work1 
+   75  cp ~/Downloads/vi_Work1 intro2linux/
+   76  cp ~/Downloads/vi_Work1 ~/intro2linux/
+   77  cp ~/Downloads/vi_Work1 ./
+   78  cp ~/Downloads/vi_Work1 .
+   79  cd ..
+   80  ls
+   81  cd .
+   82  ls
+   83  cd ~
+   84  ls
+   85  rm intro2linux
+   86  rm -r intro2linux
+   87  rm exercise1
+   88  rm exercise_1
+   89  exit
+   90  pwd
+   91  mkdir intro2linux
+   92  cd intro2linux
+   93  pwd
+   94  mkdir homework1 temp
+   95  ls
+   96  exit
+   97  whoami
+   98  whoami --help
+   99  series last
+  100  cd /
+  101  ls
+  102  ls user
+  103  ls usr
+  104  ls /home/
+  105  cd
+  106  pwd
+  107  cd /
+  108  cd root/
+  109  ls
+  110  su
+  111  sudo su
+  112  su
+  113  sudo su
+  114  cd /root
+  115  free -t
+  116  free -th
+  117  free -tg
+  118  free -tm
+  119  sudo su
+  120  sudo - su
+  121  sudo su
+  122  cat exercise_1
+  123  vim exercise_1
+  124  sudo su
+  125  ls
+  126  su  accounts
+  127  cp ~/Downloads/vi_Work1.txt .
+  128  ls
+  129  cp vi_Work1.txt homework1/
+  130  cp /etc/fstab /etc/passwd homework1/
+  131  mv homework1/passwd  homework1/mypasswd
+  132  ls
+  133  ls homework1/
+  134  cp homework1/* temp/
+  135  ls homework1/ temp/
+  136  mv temp/vi_Work1.txt temp/vi_test
+  137  cp temp/vi_test homework1/
+  138  ls homework1/
+  139  cd temp
+  140  ls --help
+  141  ls -l ../homework1/
+  142  cd ..
+  143  rmdir temp/
+  144  rm temp/*
+  145  rmdir temp/
+  146  ls
+  147  cd homework1/
+  148  ls -l
+  149  ls -h
+  150  ls --help | grep
+  151  ls --help | grep human
+  152  wc -wcm mypasswd
+  153  wc -wcm .*
+  154  wc -wcm *
+  155  rm *
+  156  ls
+  157  cd ~
+  158  ls -a ~/intro2linux/homework1/
+  159  date
+  160  sudo su
+  161  pwd
+  162  mkdir intro2linux
+  163  cd intro2linux
+  164  mkdir homework1 temp
+  165  ls
+  166  cp ~/Downloads/vi_work1.txt 
+  167  cp ~/Downloads/vi_work1.txt intro2linux
+  168  cp ~/Downloads/vi_work1.txt ~/intro2linux
+  169  cp /Downloads/vi_work1.txt 
+  170  cp /Downloads/vi_work1.txt intro2linux
+  171  cp ~/Downloads/vi_work1.txt intro2linux
+  172  cd..
+  173  cd ..
+  174  pwd
+  175  ls
+  176  cd home
+  177  ls
+  178  cd nathiya
+  179  ls
+  180  cd ~
+  181  ls
+  182  cp ~/Downloads/vi_work1.txt ~/intro2linux
+  183  ls ~/Downloads
+  184  cp ~/Downloads/vi_Work1.txt 
+  185  cp ~/Downloads/vi_Work1.txt ~/intro2linux
+  186  rm -r intro2linux
+  187  ls
+  188  rm exercise_1
+  189  ls
+  190  script exercise_1
+  191  vim exercise_1
+  192  rmdir -r intro2linux
+  193  rm -r intro2linux
+  194  rm exercise_1
+  195  ls
+  196  pwd
+  197  clear
+  198  script exercise_1
+  199  vi exercise_1
+  200  ls
+  201  clear
+  202  script exercise_1
+  203  pwd
+  204  cd intro2linux
+  205  cp ~/Downloads/vi_Work1.txt .
+  206  ls
+  207  rm vi_Work1.txt 
+  208  script exercise_1
+  209  ls
+  210  cd ..
+  211  ls
+  212  cd Downloads/
+  213  ls
+  214  cd ..
+  215  ls
+  216  cd Downloads/
+  217  ls
+  218  vim 
+  219  ls
+  220  vim cprog.c 
+  221  clear
+  222  cd ..
+  223  ls
+  224  cd ..
+  225  pwd
+  226  cd ~
+  227  pwd
+  228  script exercise_1
+  229  man free
+  230  sudo apt-get install man
+  231  man free
+  232  man man
+  233  man free
+  234  ls /proc/meminfo 
+  235  cat /proc/meminfo 
+  236  stat --help
+  237  strace
+  238  sudo apt-get install strace
+  239  strace --hrlp
+  240  strace ls
+  241  ls
+  242  history
+  243  sudo su
+  244  exit
+  245  ls
+  246  cd ..
+  247  ls
+  248  sudo -su
+  249  sudo - su
+  250  sudo -su
+  251  sudo su
+  252  ls
+  253  su john
+  254  su pat
+  255  ls
+  256  cd ..
+  257  ls
+  258  pwd
+  259  mkdir intro2linux
+  260  ls
+  261  cd intro2linux
+  262  mkdir homework1 temp
+  263  ls
+  264  cp ~/Downloads/vi_Work1.txt .
+  265  ls
+  266  cp vi_Work1.txt homework1/
+  267  ls
+  268  ls homework1/
+  269  cp /etc/fstab /etc/passwd homework1/
+  270  ls
+  271  ls homework1/
+  272  mv homework1/passwd homework1/mypasswd
+  273  ls
+  274  ls homework1/
+  275  cp homework1/* temp/
+  276  ls
+  277  ls temp/
+  278  mv temp/vi_Work1.txt temp/vi_test
+  279  cp temp/vi_test homework1/
+  280  ls homework1/ temp/
+  281  cd temp
+  282  ls ../homework1/
+  283  cd ..
+  284  rmdir temp
+  285  rm temp/*
+  286  ls
+  287  ls temp/
+  288  rmdir temp
+  289  ls
+  290  ls homework1/
+  291  cd homework1/
+  292  ls
+  293  ls -l
+  294  ls -h
+  295  wc -wcm mypasswd 
+  296  wc -wcm *
+  297  rm *
+  298  ls
+  299  cd ~
+  300  ls -a intro2linux/homework1/
+  301  date
+  302  sudo -su
+  303  sudo su
+  304  exit
+  305  addgroup parents
+  306  sudo su
+  307  exit
+  308  pwd
+  309  mkdir intro2linux
+  310  ls
+  311  cd intro2linux
+  312  mkdir homework1 temp
+  313  ls
+  314  cp ~/Downloads/vi_Work1.txt .
+  315  ls
+  316  cp vi_Work1.txt ./homework1/
+  317  ls homework1/
+  318  cp /etc/fstab /etc/passwd ./homework1/
+  319  ls homework1/
+  320  mv homework1/passwd homework1/mypasswd
+  321  cp homework1/* temp/
+  322  ls homework1/ temp/
+  323  mv temp/vi_Work1.txt temp/vi_test
+  324  ls temp/
+  325  cp temp/vi_test homework1/
+  326  cd temp
+  327  ls ../homework1/
+  328  cd ..
+  329  rmdir temp/
+  330  rm temp/*
+  331  ls temp/
+  332  rmdir temp/
+  333  ls
+  334  cd homework1/
+  335  ls
+  336  ls -l
+  337  ls -h
+  338  wc -wcm mypasswd 
+  339  wc .wcm *
+  340  rm *
+  341  ls
+  342  cd ~
+  343  ls -a intro2linux/homework1/
+  344  date
+  345  sudo su
+  346  exit
+  347  cygwin
+  348  eclipse 
+  349  ide
+  350  sudo apt-get install openjdk-7-jdk
+  351  ls
+  352  cd /
+  353  ls
+  354  ls dev/
+  355  ls dev/fd
+  356  exit
+  357  echo $home
+  358  ls --help
+  359  ls --help| grep -U
+  360  ls --help| grep -i  context
+  361  man sort| grep -i unique
+  362  sort --help
+  363  grep -i list .
+  364  grep -ri list .
+  365  grep -ri list .|grep -vi "about"
+  366  grep -ri list .|grep -vi "about"|sort -u
+  367  grep -ri list .|grep -vi "about"|sort -u|less
+  368  less --help
+  369  man less
+  370  grep -ce list .
+  371  grep -ce list list.info
+  372  ls -l | tee build.log
+  373  make | tee build.log
+  374  ls -il
+  375  rm build.log
+  376  ls
+  377  ls -il
+  378  ps xu
+  379  exit
+  380  pwd
+  381  mkdir exercise2
+  382  ls
+  383  mv exercise_2 exercise2
+  384  cd exercise2
+  385  ls
+  386  cp ../Downloads/vi_Work1.txt ../Downloads/vi_Work2.txt ../Downloads/vi_Work3.txt 
+  387  cp ../Downloads/vi_Work1.txt ../Downloads/vi_Work2.txt ../Downloads/vi_Work3.txt .
+  388  ls
+  389  cat vi_Work2.txt vi_Work3.txt 
+  390  exit
+  391  script exercise_2
+  392  exit
+  393  cat -i vi_Work1.txt 
+  394  more vi_Work1.txt vi_Work2.txt vi_Work3.txt 
+  395  head -3 vi_Work3.txt 
+  396  tail -3 vi_Work2.txt 
+  397  grep identifier vi_Work3.txt 
+  398  grep -ri lawyers
+  399  grep -ri lawyers .
+  400  grep -ni please vi_Work2.txt 
+  401  user
+  402  whoami
+  403  cd ~
+  404  echo my name is nathiya meganathan
+  405  echo nathiya meganathan |tee myname.txt
+  406  ls
+  407  echo $HOME | tee dir.log
+  408  ls
+  409  ls dir.log
+  410  cat dir.log
+  411  cat dir.log/home/nathiya
+  412  make | tee dir.log
+  413  make --help
+  414  man make
+  415  sudo apt-get install make
+  416  make | tee dir.log
+  417  ls 
+  418  ls | tee dir.log
+  419  ls dir.log 
+  420  make | tee dir.log 
+  421  ls -il
+  422  ls -l
+  423  ls -al
+  424  chmod -R a+x dir.log 
+  425  ls -il
+  426  chmod 044 dir.log 
+  427  ls -il
+  428  exit
+  429  script exercise_2
+  430  cat exercise_2
+  431  ls
+  432  cat exercise2/exercise_2 
+  433  clear
+  434  ls
+  435  rm exercise_2
+  436  ls
+  437  cd exercise2
+  438  script exercise_2 
+  439  exit
+  440  ls
+  441  rm dir.log 
+  442  rm -r dir.log 
+  443  ls
+  444  rm exercise2
+  445  rm -r exercise2
+  446  rm myname.txt 
+  447  ls
+  448  exit 
+  449  ls
+  450  mkdir exercise2
+  451  ls
+  452  mv exercise_2 ./exercise2
+  453  ls
+  454  cd exercise2
+  455  cp ../Downloads/vi_Work1.txt ../Downloads/vi_Work2.txt ../Downloads/vi_Work3 .
+  456  cp ../Downloads/vi_Work1.txt ../Downloads/vi_Work2.txt ../Downloads/vi_Work3.txt .
+  457  ls
+  458  cat vi_Work2.txt vi_Work3.txt 
+  459  more vi_Work1.txt vi_Work2.txt vi_Work3.txt 
+  460  head -3 vi_Work3.txt 
+  461  tail -5 vi_Work2.txt 
+  462  grep identifier vi_Work3.txt 
+  463  grep -r lawyers .
+  464  grep -li please vi_Work2.txt 
+  465  grep -ni please vi_Work2.txt 
+  466  echo Nathiya Meganathan
+  467  cd ~
+  468  cd exercise2
+  469  ls ..
+  470  echo Nathiya | tee myname.txt
+  471  echo $path
+  472  echo $.
+  473  ls . |tee dir.log
+  474  ls -il
+  475  ls -l
+  476  ls -ai
+  477  ls -ail
+  478  chmod a+x dir.log 
+  479  ls -ail
+  480  chmod go+400 dir.log 
+  481  chmod 744 dir.log 
+  482  ls -ail
+  483  cp dir.log mylog
+  484  ls
+  485  ls -ail
+  486  chmod 444 mylog 
+  487  ls -ail
+  488  chmod  224 mylog 
+  489  ls -ail
+  490  chmod  664 mylog 
+  491  ls -ail
+  492  chmod  go+r .
+  493  ls -ail
+  494  chmod 044 .
+  495  ls -ail
+  496  chmod 744 .
+  497  ls
+  498  chmod u+rwx .
+  499  exit
+  500  ls
+  501  echo $PATH
+  502  echo $HOME
+  503  echo ls
+  504  echo $LS
+  505  echo $ls
+  506  echo $EXERCISE2
+  507  ls .|tee dir.log
+  508  rm dir.log
+  509  ls
+  510  exit
+  511  ls -ail
+  512  ls -ail
+  513  chmod -R go-wx ./
+  514  ls -ail
+  515  ln -s vi_Work3.txt vi_mywork3
+  516  ls
+  517  ls -il | grep vi_Work3.txt vi_mywork3 
+  518  ls -il | grep -e vi_Work3.txt -e vi_mywork3 
+  519  ln vi_Work2.txt vi_mywork2
+  520  ls
+  521  ls -il | grep -e vi_Work2.txt -e vi_mywork2 
+  522  chmod 744 vi_Work1.txt 
+  523  ls -il
+  524  chmod 714 vi_Work1.txt 
+  525  ls -il
+  526  ps xu
+  527  rm vi_mywork3 
+  528  ls
+  529  chmod -R 777 ./
+  530  ls -il
+  531  exit
+  532  cc
+  533  man cc
+  534  clear
+  535  script exercise_2
+  536  ls
+  537  ls exercise2
+  538  chmod u+rw exercise2/
+  539  ls exercise2
+  540  cd exercise2/
+  541  sudo cd exercise2/
+  542  sudo exercise2/
+  543  sudo chmod -R 777 ./exercise2
+  544  ls
+  545  ls ./exercise2/
+  546  cd exercise2
+  547  script exercise_2
+  548  cat exercise_2
+  549  exit
+  550  cat ./exercise2
+  551  cat ./exercise2/exercise_2 
+  552  exit
+  553  ls
+  554  ls exercise2
+  555  cp ./exercise2/exercise_2  ~/Downloads/
+  556  ls Downloads/
+  557  cd exercise_2
+  558  cd exercise2
+  559  clear
+  560  vi exercise_2 
+  561  exit
+  562  vi helloworld.c
+  563  ls
+  564  cat helloworld.c
+  565  vim helloworld.c
+  566  ls
+  567  ls ./intro2linux/
+  568  mkdir c
+  569  ls
+  570  cd c
+  571  vi helloworld.c
+  572  ls
+  573  vi helloworld.c
+  574  cc helloworld.c
+  575  ls
+  576  ./a.out
+  577  cc helloworld.c helloworld.out
+  578  cc helloworld.c |helloworld.out
+  579  cc -o helloworld.out helloworld.c 
+  580  ls
+  581  cat helloworld.out 
+  582  clear
+  583  ls
+  584  vi helloworld.out
+  585  cat a.out 
+  586  :q
+  587  clear
+  588  ls
+  589  vi helloworld.c
+  590  ls
+  591  cd c
+  592  ls
+  593  vi hello.c 
+  594  cc hello.c 
+  595  vi hello.c 
+  596  cc hello.c 
+  597  ./a.out
+  598  vi hello.c 
+  599  cc hello.c 
+  600  vi hello.c 
+  601  cc hello.c 
+  602  ./a.out /
+  603  vi hello.c 
+  604  cc hello.c 
+  605  ./a.out /
+  606  cd c
+  607  ls
+  608  rm a.out
+  609  ls
+  610  rm helloworld.out 
+  611  rm helloworld.c 
+  612  ls
+  613  vi helloworld.c
+  614  cc helloworld.c
+  615  vi helloworld.c
+  616  cc helloworld.c
+  617  ./a.out
+  618  vi helloworld.c
+  619  cc helloworld.c
+  620  ./a.out
+  621  ls
+  622  vi helloworld.c
+  623  cc helloworld.c
+  624  ./a.out
+  625  cd ..
+  626  ls
+  627  ls ./Downloads/
+  628  mv ./Downloads/GuessNumber.c ./c/
+  629  cd c
+  630  ls
+  631  vi GuessNumber.c 
+  632  cc GuessNumber.c 
+  633  vi GuessNumber.c 
+  634  cc GuessNumber.c 
+  635  ls
+  636  ./a.out
+  637  ls
+  638  vi hello.c
+  639  cc hello.c
+  640  ./a.out
+  641  vi hello.c
+  642  cc hello.c
+  643  ./a.out
+  644  vi hello.c
+  645  cc hello.c
+  646  vi hello.c
+  647  cc hello.c
+  648  ls
+  649  ls exercise2
+  650  ls -il
+  651  df --help
+  652  man df
+  653  df -h
+  654  fstab --help
+  655  man fstab
+  656  df -h Downloads/
+  657  who
+  658  whoami
+  659  echo $.
+  660  a = 5
+  661  env
+  662  echo $user
+  663  echo $USER
+  664  echo LS_COLORS
+  665  echo $LS_COLORS
+  666  myenv = yes
+  667  myenv=yes
+  668  echo $myenv
+  669  a=5
+  670  echo $a
+  671  ls
+  672  projdir=/home/nathiya/exercise2/mylog 
+  673  $projdir;ls -la;cd $projdir 
+  674  clear
+  675  ls
+  676  ls intro2linux/
+  677  rm -i intro2linux/vi_Work1.txt 
+  678  ls intro2linux/vi_Work1.txt 
+  679  which alias
+  680  ls -a .*
+  681  ls -d .*
+  682  cat .bashrc 
+  683  cat .profile 
+  684  clear
+  685  ls .*
+  686  exit 
+  687  ls
+  688  cd exercise2
+  689  ls
+  690  cd ..
+  691  cd c
+  692  ls
+  693  cat hello.c 
+  694  mv hello.c ~/Downloads/
+  695  cd ..
+  696  mv hello.c ~/Downloads/
+  697  ls
+  698  ls -a ~/
+  699  ls -a ~*
+  700  ls -a ~/*
+  701  ls
+  702  ls -a
+  703  cat .profile 
+  704  ls env
+  705  man env
+  706  $ ls .!
+  707  ls
+  708  ls.*!
+  709  $ ls .!
+  710  ls -ld .?* 
+  711  ls -d .?* 
+  712  ls -ad .* 
+  713  print env
+  714  env
+  715  hostname
+  716  echo $HOSTNAME
+  717  path
+  718  SHELL
+  719  echo $SHELL
+  720  ls -il
+  721  ls -il .*
+  722  ls 
+  723  ls -l
+  724  chmod 744 exercise2
+  725  ls -l
+  726  ls -il
+  727  ls .*
+  728  man -ls
+  729  man ls
+  730  ls -d
+  731  ls -dl
+  732  ls --help
+  733  :q
+  734  ls -lidA
+  735  ls -liA
+  736  ls -A
+  737  ls -d.*
+  738  ls -d .*
+  739  ls -dl .*
+  740  ls .*
+  741  ls
+  742  df -h
+  743  ls $HOME
+  744  ls /etc/
+  745  ls /etc/ > etc.dir
+  746  ls
+  747  ls etc.dir
+  748  cat etc.dir 
+  749  ls
+  750  rm etc.dir 
+  751  ls
+  752  ps
+  753  grep -n 'word' .
+  754  grep -r 'word' .
+  755  grep -r 'kernel' .
+  756  ls -rl
+  757  ls -ril
+  758  ls -irl
+  759  more exercise2
+  760  more exercise_1
+  761  ls
+  762  cd exercise2
+  763  ls
+  764  ls exercise_2 
+  765  more exercise_2 
+  766  ls -ad *
+  767  ls -ad 
+  768  exit
+  769  ls -ad .*
+  770  cat .profile
+  771  env
+  772  echo $HOSTNAME
+  773  echo $SHELL
+  774  alias ls='ls -iR'
+  775  ls
+  776  unalias
+  777  unalias ls
+  778  history
+  779  diff .bashrc .profile
+  780  echo $HOME
+  781  ls /etc/ > etc.dir
+  782  ls
+  783  cp etc.dir etc.dir2
+  784  cat etc.dir2
+  785  tar -cvf myhome.tar .
+  786  tar -tf myhome.tar 
+  787  ls -l
+  788  ls -lh
+  789  tar -cvjf myhome.tar.bz2 myhome.tar 
+  790  ls -lh
+  791  tar -f myhome.tar --delete ./etc.dir
+  792  find ~ -name vi.\* 2>/dev/null 
+  793  find ~ -name vi.\* 
+  794  find ~ -name vi_.\* 
+  795  find ~ -name vi_ .\* 
+  796  find ~ -name vi_????????? .\* 
+  797  find ~ -name vi_?????????
+  798  find ~ -name vi.\*
+  799  find ~ -name vi.*
+  800  find ~ -name vi .\*
+  801  find ~ -name vi.\* -print
+  802  find ~ -type d -name 'kernel'
+  803  exit
+  804  find / -type f -perm -a+w -name vi.\* -print 2>/dev/null
+  805  find / -type f -perm -a+w -name vi .\* -print 2>/dev/null
+  806  find / -type f -perm -a+w -name vi.Work1.txt .\* -print 2>/dev/null
+  807  find / -type f -perm -a+R -name vi.Work1.txt .\* -print 2>/dev/null
+  808  find / -type f -perm -a+R -name txt .\* -print 2>/dev/null
+  809  find / -type f -perm -a+R -name .\* -print 2>/dev/null
+  810  find / -type f -perm -a+R -name  .\* -print 2>/dev/null
+  811  find . -type f -perm -a+R -name  .\* -print 2>/dev/null
+  812  ls
+  813  more exercise_3
+  814  script exercise3
+  815  ls
+  816  rm exercise3 myhome.tar myhome.tar.bz2 script.sh etc.dir2 etc.dir
+  817  ls
+  818  clear
+  819  ls -ad
+  820  ls -ad .*
+  821  script exercise3
+  822  more exercise_3
+  823  :clear
+  824  grep -ri 'kernel' ~
+  825  find . -type d   
+  826  ps
+  827  ps xu
+  828  find / -type f -perm -a+w 
+  829  find / -type f -perm -a+w 2>/dev/null 
+  830  find / -type f -perm -a+w 2>/dev/null | tee w_file
+  831  ls
+  832  tar -cvjf w_file.tar.bz2 w_file
+  833  ls
+  834  exit
+  835  ls -ad *
+  836  ls -ad .*
+  837  cat .profile
+  838  env
+  839  echo $HOSTNAME
+  840  echo $SHELL
+  841  alias ls='ls -iR'
+  842  ls
+  843  unalias ls
+  844  history
+  845  diff .bashrc .profile
+  846  echo $HOME
+  847  ls /etc/ < etc.dir
+  848  ls
+  849  ls /etc/
+  850  ls /etc/< etc.dir
+  851  ls /etc > etc.dir
+  852  ls
+  853  cp etc.dir  etc.dir2
+  854  cat etc.dir2
+  855  clear
+  856  exit
+  857  clear
+  858  ls
+  859  script exercise3
+  860  ls
+  861  more exercise3
+  862  ls
+  863  rm exercise_3
+  864  rm exercise3
+  865  rm etc.dir etc.dir2 myhome.tar myhome.tar.bz2  w_file w_file.tar.bz2 
+  866  ls
+  867  clear
+  868  script exercise_3
+  869  logout
+  870  tar -cvf home.tar ~
+  871  ls
+  872  tar -tf home.tar 
+  873  tar -cvjf home.tar.bzip2 home.tar 
+  874  ls
+  875  tar -f home.tar --delete exercise_1
+  876  tar -f home.tar --delete home/nathiya/exercise_1
+  877  ls
+  878  tar -tf home.tar 
+  879  find . -name vi
+  880  find . -name vi_
+  881  find . -name vi_?????????
+  882  find . -name vi.\*
+  883  find . -name vi. \ *
+  884  find . -name vi .\*
+  885  grep -ri 'kernel' ~
+  886  find . -type d 
+  887  find . -type f -perm -a+w 2 > /dev/null 
+  888  find . -type f -perm -a+w 2> /dev/null 
+  889  find . -type f -perm -a+w 
+  890  find . -type f -perm -a+w |tee w_file | tar -cvjf w_file.tar.bzip2 w_file
+  891  find . -type f -perm -a+w |tee w_file | tar -cvjf w_file.tar.bz2 w_file
+  892  ps xu
+  893  exit
+  894  script exercise_3
+  895  more exercise_3
+  896  clear
+  897  more exercise_3
+  898  ls -ad .*
+  899  cat .profile
+  900  env
+  901  echo $HOSTNAME
+  902  echo $SHELL
+  903  alias ls='ls -iR'
+  904  ls
+  905  unalias ls
+  906  history
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ !!
+history
+    1  xmodmap -e "keycode 94 shift = backslash bar"
+    2  xmodmap 
+    3  ls
+    4  pwd
+    5  python -v
+    6  python -V
+    7  sudo apt-get update
+    8  sudo apt-get install ipython-notebook
+    9  vim
+   10  vi
+   11  xmodmap 
+   12  xmodmap -e "keycode 94 shift = backslash bar"
+   13  vim
+   14  vi
+   15  sudo apt-get install vim
+   16  vim
+   17  vim hi
+   18  ipython
+   19  exit
+   20  pwd
+   21  mkdir intro2linux
+   22  cd intro2linux
+   23  mkdir homework1 temp
+   24  ls
+   25  cp ~/Downloads/vi_Work1.txt ~/intro2linux
+   26  ls
+   27  cp vi_Work1.txt homework1/
+   28  cp /etc/fstab /etc/passwd homework1/
+   29  mv homework1/passwd homework1/mypasswd
+   30  cp homework1/mypasswd homework1/fstab homework1/vi_Work1.txt temp/
+   31  ls homework1 temp
+   32  mv temp/vi_Work1.txt temp/vi_test
+   33  cp temp/vi_test homework1/
+   34  cd temp
+   35  ls ~/intro2linux/homework1
+   36  cd ..
+   37  rm temp
+   38  cd temp
+   39  rm fstab mypasswd vi_Work1.txt
+   40  rm fstab mypasswd vi_test
+   41  cd ..
+   42  rm temp
+   43  rm -r temp
+   44  ls
+   45  cd homework1
+   46  ls
+   47  ls -l
+   48  ls -lh
+   49  wc -wcm mypasswd
+   50  wc -wcm 
+   51  wc -wcm homework1
+   52  wc -wcm ~/intro2linux/homework1
+   53  wc .*
+   54  wc . *
+   55  wc -wcm .*
+   56  wc -wcm . *
+   57  rm -r homework1
+   58  rm -r
+   59  ls
+   60  rm fstab mypasswd vi_Work1.txt vi_test
+   61  ls
+   62  cd ~
+   63  ls -a
+   64  pwd
+   65  ls -a intro2linux/homework2
+   66  ls -a intro2linux/homework1
+   67  exit
+   68  pwd
+   69  mkdir intro2linux
+   70  cd intro2linux
+   71  pwd
+   72  mkdir homework1 temp
+   73  ls
+   74  cp ~/Downloads/vi_Work1 
+   75  cp ~/Downloads/vi_Work1 intro2linux/
+   76  cp ~/Downloads/vi_Work1 ~/intro2linux/
+   77  cp ~/Downloads/vi_Work1 ./
+   78  cp ~/Downloads/vi_Work1 .
+   79  cd ..
+   80  ls
+   81  cd .
+   82  ls
+   83  cd ~
+   84  ls
+   85  rm intro2linux
+   86  rm -r intro2linux
+   87  rm exercise1
+   88  rm exercise_1
+   89  exit
+   90  pwd
+   91  mkdir intro2linux
+   92  cd intro2linux
+   93  pwd
+   94  mkdir homework1 temp
+   95  ls
+   96  exit
+   97  whoami
+   98  whoami --help
+   99  series last
+  100  cd /
+  101  ls
+  102  ls user
+  103  ls usr
+  104  ls /home/
+  105  cd
+  106  pwd
+  107  cd /
+  108  cd root/
+  109  ls
+  110  su
+  111  sudo su
+  112  su
+  113  sudo su
+  114  cd /root
+  115  free -t
+  116  free -th
+  117  free -tg
+  118  free -tm
+  119  sudo su
+  120  sudo - su
+  121  sudo su
+  122  cat exercise_1
+  123  vim exercise_1
+  124  sudo su
+  125  ls
+  126  su  accounts
+  127  cp ~/Downloads/vi_Work1.txt .
+  128  ls
+  129  cp vi_Work1.txt homework1/
+  130  cp /etc/fstab /etc/passwd homework1/
+  131  mv homework1/passwd  homework1/mypasswd
+  132  ls
+  133  ls homework1/
+  134  cp homework1/* temp/
+  135  ls homework1/ temp/
+  136  mv temp/vi_Work1.txt temp/vi_test
+  137  cp temp/vi_test homework1/
+  138  ls homework1/
+  139  cd temp
+  140  ls --help
+  141  ls -l ../homework1/
+  142  cd ..
+  143  rmdir temp/
+  144  rm temp/*
+  145  rmdir temp/
+  146  ls
+  147  cd homework1/
+  148  ls -l
+  149  ls -h
+  150  ls --help | grep
+  151  ls --help | grep human
+  152  wc -wcm mypasswd
+  153  wc -wcm .*
+  154  wc -wcm *
+  155  rm *
+  156  ls
+  157  cd ~
+  158  ls -a ~/intro2linux/homework1/
+  159  date
+  160  sudo su
+  161  pwd
+  162  mkdir intro2linux
+  163  cd intro2linux
+  164  mkdir homework1 temp
+  165  ls
+  166  cp ~/Downloads/vi_work1.txt 
+  167  cp ~/Downloads/vi_work1.txt intro2linux
+  168  cp ~/Downloads/vi_work1.txt ~/intro2linux
+  169  cp /Downloads/vi_work1.txt 
+  170  cp /Downloads/vi_work1.txt intro2linux
+  171  cp ~/Downloads/vi_work1.txt intro2linux
+  172  cd..
+  173  cd ..
+  174  pwd
+  175  ls
+  176  cd home
+  177  ls
+  178  cd nathiya
+  179  ls
+  180  cd ~
+  181  ls
+  182  cp ~/Downloads/vi_work1.txt ~/intro2linux
+  183  ls ~/Downloads
+  184  cp ~/Downloads/vi_Work1.txt 
+  185  cp ~/Downloads/vi_Work1.txt ~/intro2linux
+  186  rm -r intro2linux
+  187  ls
+  188  rm exercise_1
+  189  ls
+  190  script exercise_1
+  191  vim exercise_1
+  192  rmdir -r intro2linux
+  193  rm -r intro2linux
+  194  rm exercise_1
+  195  ls
+  196  pwd
+  197  clear
+  198  script exercise_1
+  199  vi exercise_1
+  200  ls
+  201  clear
+  202  script exercise_1
+  203  pwd
+  204  cd intro2linux
+  205  cp ~/Downloads/vi_Work1.txt .
+  206  ls
+  207  rm vi_Work1.txt 
+  208  script exercise_1
+  209  ls
+  210  cd ..
+  211  ls
+  212  cd Downloads/
+  213  ls
+  214  cd ..
+  215  ls
+  216  cd Downloads/
+  217  ls
+  218  vim 
+  219  ls
+  220  vim cprog.c 
+  221  clear
+  222  cd ..
+  223  ls
+  224  cd ..
+  225  pwd
+  226  cd ~
+  227  pwd
+  228  script exercise_1
+  229  man free
+  230  sudo apt-get install man
+  231  man free
+  232  man man
+  233  man free
+  234  ls /proc/meminfo 
+  235  cat /proc/meminfo 
+  236  stat --help
+  237  strace
+  238  sudo apt-get install strace
+  239  strace --hrlp
+  240  strace ls
+  241  ls
+  242  history
+  243  sudo su
+  244  exit
+  245  ls
+  246  cd ..
+  247  ls
+  248  sudo -su
+  249  sudo - su
+  250  sudo -su
+  251  sudo su
+  252  ls
+  253  su john
+  254  su pat
+  255  ls
+  256  cd ..
+  257  ls
+  258  pwd
+  259  mkdir intro2linux
+  260  ls
+  261  cd intro2linux
+  262  mkdir homework1 temp
+  263  ls
+  264  cp ~/Downloads/vi_Work1.txt .
+  265  ls
+  266  cp vi_Work1.txt homework1/
+  267  ls
+  268  ls homework1/
+  269  cp /etc/fstab /etc/passwd homework1/
+  270  ls
+  271  ls homework1/
+  272  mv homework1/passwd homework1/mypasswd
+  273  ls
+  274  ls homework1/
+  275  cp homework1/* temp/
+  276  ls
+  277  ls temp/
+  278  mv temp/vi_Work1.txt temp/vi_test
+  279  cp temp/vi_test homework1/
+  280  ls homework1/ temp/
+  281  cd temp
+  282  ls ../homework1/
+  283  cd ..
+  284  rmdir temp
+  285  rm temp/*
+  286  ls
+  287  ls temp/
+  288  rmdir temp
+  289  ls
+  290  ls homework1/
+  291  cd homework1/
+  292  ls
+  293  ls -l
+  294  ls -h
+  295  wc -wcm mypasswd 
+  296  wc -wcm *
+  297  rm *
+  298  ls
+  299  cd ~
+  300  ls -a intro2linux/homework1/
+  301  date
+  302  sudo -su
+  303  sudo su
+  304  exit
+  305  addgroup parents
+  306  sudo su
+  307  exit
+  308  pwd
+  309  mkdir intro2linux
+  310  ls
+  311  cd intro2linux
+  312  mkdir homework1 temp
+  313  ls
+  314  cp ~/Downloads/vi_Work1.txt .
+  315  ls
+  316  cp vi_Work1.txt ./homework1/
+  317  ls homework1/
+  318  cp /etc/fstab /etc/passwd ./homework1/
+  319  ls homework1/
+  320  mv homework1/passwd homework1/mypasswd
+  321  cp homework1/* temp/
+  322  ls homework1/ temp/
+  323  mv temp/vi_Work1.txt temp/vi_test
+  324  ls temp/
+  325  cp temp/vi_test homework1/
+  326  cd temp
+  327  ls ../homework1/
+  328  cd ..
+  329  rmdir temp/
+  330  rm temp/*
+  331  ls temp/
+  332  rmdir temp/
+  333  ls
+  334  cd homework1/
+  335  ls
+  336  ls -l
+  337  ls -h
+  338  wc -wcm mypasswd 
+  339  wc .wcm *
+  340  rm *
+  341  ls
+  342  cd ~
+  343  ls -a intro2linux/homework1/
+  344  date
+  345  sudo su
+  346  exit
+  347  cygwin
+  348  eclipse 
+  349  ide
+  350  sudo apt-get install openjdk-7-jdk
+  351  ls
+  352  cd /
+  353  ls
+  354  ls dev/
+  355  ls dev/fd
+  356  exit
+  357  echo $home
+  358  ls --help
+  359  ls --help| grep -U
+  360  ls --help| grep -i  context
+  361  man sort| grep -i unique
+  362  sort --help
+  363  grep -i list .
+  364  grep -ri list .
+  365  grep -ri list .|grep -vi "about"
+  366  grep -ri list .|grep -vi "about"|sort -u
+  367  grep -ri list .|grep -vi "about"|sort -u|less
+  368  less --help
+  369  man less
+  370  grep -ce list .
+  371  grep -ce list list.info
+  372  ls -l | tee build.log
+  373  make | tee build.log
+  374  ls -il
+  375  rm build.log
+  376  ls
+  377  ls -il
+  378  ps xu
+  379  exit
+  380  pwd
+  381  mkdir exercise2
+  382  ls
+  383  mv exercise_2 exercise2
+  384  cd exercise2
+  385  ls
+  386  cp ../Downloads/vi_Work1.txt ../Downloads/vi_Work2.txt ../Downloads/vi_Work3.txt 
+  387  cp ../Downloads/vi_Work1.txt ../Downloads/vi_Work2.txt ../Downloads/vi_Work3.txt .
+  388  ls
+  389  cat vi_Work2.txt vi_Work3.txt 
+  390  exit
+  391  script exercise_2
+  392  exit
+  393  cat -i vi_Work1.txt 
+  394  more vi_Work1.txt vi_Work2.txt vi_Work3.txt 
+  395  head -3 vi_Work3.txt 
+  396  tail -3 vi_Work2.txt 
+  397  grep identifier vi_Work3.txt 
+  398  grep -ri lawyers
+  399  grep -ri lawyers .
+  400  grep -ni please vi_Work2.txt 
+  401  user
+  402  whoami
+  403  cd ~
+  404  echo my name is nathiya meganathan
+  405  echo nathiya meganathan |tee myname.txt
+  406  ls
+  407  echo $HOME | tee dir.log
+  408  ls
+  409  ls dir.log
+  410  cat dir.log
+  411  cat dir.log/home/nathiya
+  412  make | tee dir.log
+  413  make --help
+  414  man make
+  415  sudo apt-get install make
+  416  make | tee dir.log
+  417  ls 
+  418  ls | tee dir.log
+  419  ls dir.log 
+  420  make | tee dir.log 
+  421  ls -il
+  422  ls -l
+  423  ls -al
+  424  chmod -R a+x dir.log 
+  425  ls -il
+  426  chmod 044 dir.log 
+  427  ls -il
+  428  exit
+  429  script exercise_2
+  430  cat exercise_2
+  431  ls
+  432  cat exercise2/exercise_2 
+  433  clear
+  434  ls
+  435  rm exercise_2
+  436  ls
+  437  cd exercise2
+  438  script exercise_2 
+  439  exit
+  440  ls
+  441  rm dir.log 
+  442  rm -r dir.log 
+  443  ls
+  444  rm exercise2
+  445  rm -r exercise2
+  446  rm myname.txt 
+  447  ls
+  448  exit 
+  449  ls
+  450  mkdir exercise2
+  451  ls
+  452  mv exercise_2 ./exercise2
+  453  ls
+  454  cd exercise2
+  455  cp ../Downloads/vi_Work1.txt ../Downloads/vi_Work2.txt ../Downloads/vi_Work3 .
+  456  cp ../Downloads/vi_Work1.txt ../Downloads/vi_Work2.txt ../Downloads/vi_Work3.txt .
+  457  ls
+  458  cat vi_Work2.txt vi_Work3.txt 
+  459  more vi_Work1.txt vi_Work2.txt vi_Work3.txt 
+  460  head -3 vi_Work3.txt 
+  461  tail -5 vi_Work2.txt 
+  462  grep identifier vi_Work3.txt 
+  463  grep -r lawyers .
+  464  grep -li please vi_Work2.txt 
+  465  grep -ni please vi_Work2.txt 
+  466  echo Nathiya Meganathan
+  467  cd ~
+  468  cd exercise2
+  469  ls ..
+  470  echo Nathiya | tee myname.txt
+  471  echo $path
+  472  echo $.
+  473  ls . |tee dir.log
+  474  ls -il
+  475  ls -l
+  476  ls -ai
+  477  ls -ail
+  478  chmod a+x dir.log 
+  479  ls -ail
+  480  chmod go+400 dir.log 
+  481  chmod 744 dir.log 
+  482  ls -ail
+  483  cp dir.log mylog
+  484  ls
+  485  ls -ail
+  486  chmod 444 mylog 
+  487  ls -ail
+  488  chmod  224 mylog 
+  489  ls -ail
+  490  chmod  664 mylog 
+  491  ls -ail
+  492  chmod  go+r .
+  493  ls -ail
+  494  chmod 044 .
+  495  ls -ail
+  496  chmod 744 .
+  497  ls
+  498  chmod u+rwx .
+  499  exit
+  500  ls
+  501  echo $PATH
+  502  echo $HOME
+  503  echo ls
+  504  echo $LS
+  505  echo $ls
+  506  echo $EXERCISE2
+  507  ls .|tee dir.log
+  508  rm dir.log
+  509  ls
+  510  exit
+  511  ls -ail
+  512  ls -ail
+  513  chmod -R go-wx ./
+  514  ls -ail
+  515  ln -s vi_Work3.txt vi_mywork3
+  516  ls
+  517  ls -il | grep vi_Work3.txt vi_mywork3 
+  518  ls -il | grep -e vi_Work3.txt -e vi_mywork3 
+  519  ln vi_Work2.txt vi_mywork2
+  520  ls
+  521  ls -il | grep -e vi_Work2.txt -e vi_mywork2 
+  522  chmod 744 vi_Work1.txt 
+  523  ls -il
+  524  chmod 714 vi_Work1.txt 
+  525  ls -il
+  526  ps xu
+  527  rm vi_mywork3 
+  528  ls
+  529  chmod -R 777 ./
+  530  ls -il
+  531  exit
+  532  cc
+  533  man cc
+  534  clear
+  535  script exercise_2
+  536  ls
+  537  ls exercise2
+  538  chmod u+rw exercise2/
+  539  ls exercise2
+  540  cd exercise2/
+  541  sudo cd exercise2/
+  542  sudo exercise2/
+  543  sudo chmod -R 777 ./exercise2
+  544  ls
+  545  ls ./exercise2/
+  546  cd exercise2
+  547  script exercise_2
+  548  cat exercise_2
+  549  exit
+  550  cat ./exercise2
+  551  cat ./exercise2/exercise_2 
+  552  exit
+  553  ls
+  554  ls exercise2
+  555  cp ./exercise2/exercise_2  ~/Downloads/
+  556  ls Downloads/
+  557  cd exercise_2
+  558  cd exercise2
+  559  clear
+  560  vi exercise_2 
+  561  exit
+  562  vi helloworld.c
+  563  ls
+  564  cat helloworld.c
+  565  vim helloworld.c
+  566  ls
+  567  ls ./intro2linux/
+  568  mkdir c
+  569  ls
+  570  cd c
+  571  vi helloworld.c
+  572  ls
+  573  vi helloworld.c
+  574  cc helloworld.c
+  575  ls
+  576  ./a.out
+  577  cc helloworld.c helloworld.out
+  578  cc helloworld.c |helloworld.out
+  579  cc -o helloworld.out helloworld.c 
+  580  ls
+  581  cat helloworld.out 
+  582  clear
+  583  ls
+  584  vi helloworld.out
+  585  cat a.out 
+  586  :q
+  587  clear
+  588  ls
+  589  vi helloworld.c
+  590  ls
+  591  cd c
+  592  ls
+  593  vi hello.c 
+  594  cc hello.c 
+  595  vi hello.c 
+  596  cc hello.c 
+  597  ./a.out
+  598  vi hello.c 
+  599  cc hello.c 
+  600  vi hello.c 
+  601  cc hello.c 
+  602  ./a.out /
+  603  vi hello.c 
+  604  cc hello.c 
+  605  ./a.out /
+  606  cd c
+  607  ls
+  608  rm a.out
+  609  ls
+  610  rm helloworld.out 
+  611  rm helloworld.c 
+  612  ls
+  613  vi helloworld.c
+  614  cc helloworld.c
+  615  vi helloworld.c
+  616  cc helloworld.c
+  617  ./a.out
+  618  vi helloworld.c
+  619  cc helloworld.c
+  620  ./a.out
+  621  ls
+  622  vi helloworld.c
+  623  cc helloworld.c
+  624  ./a.out
+  625  cd ..
+  626  ls
+  627  ls ./Downloads/
+  628  mv ./Downloads/GuessNumber.c ./c/
+  629  cd c
+  630  ls
+  631  vi GuessNumber.c 
+  632  cc GuessNumber.c 
+  633  vi GuessNumber.c 
+  634  cc GuessNumber.c 
+  635  ls
+  636  ./a.out
+  637  ls
+  638  vi hello.c
+  639  cc hello.c
+  640  ./a.out
+  641  vi hello.c
+  642  cc hello.c
+  643  ./a.out
+  644  vi hello.c
+  645  cc hello.c
+  646  vi hello.c
+  647  cc hello.c
+  648  ls
+  649  ls exercise2
+  650  ls -il
+  651  df --help
+  652  man df
+  653  df -h
+  654  fstab --help
+  655  man fstab
+  656  df -h Downloads/
+  657  who
+  658  whoami
+  659  echo $.
+  660  a = 5
+  661  env
+  662  echo $user
+  663  echo $USER
+  664  echo LS_COLORS
+  665  echo $LS_COLORS
+  666  myenv = yes
+  667  myenv=yes
+  668  echo $myenv
+  669  a=5
+  670  echo $a
+  671  ls
+  672  projdir=/home/nathiya/exercise2/mylog 
+  673  $projdir;ls -la;cd $projdir 
+  674  clear
+  675  ls
+  676  ls intro2linux/
+  677  rm -i intro2linux/vi_Work1.txt 
+  678  ls intro2linux/vi_Work1.txt 
+  679  which alias
+  680  ls -a .*
+  681  ls -d .*
+  682  cat .bashrc 
+  683  cat .profile 
+  684  clear
+  685  ls .*
+  686  exit 
+  687  ls
+  688  cd exercise2
+  689  ls
+  690  cd ..
+  691  cd c
+  692  ls
+  693  cat hello.c 
+  694  mv hello.c ~/Downloads/
+  695  cd ..
+  696  mv hello.c ~/Downloads/
+  697  ls
+  698  ls -a ~/
+  699  ls -a ~*
+  700  ls -a ~/*
+  701  ls
+  702  ls -a
+  703  cat .profile 
+  704  ls env
+  705  man env
+  706  $ ls .!
+  707  ls
+  708  ls.*!
+  709  $ ls .!
+  710  ls -ld .?* 
+  711  ls -d .?* 
+  712  ls -ad .* 
+  713  print env
+  714  env
+  715  hostname
+  716  echo $HOSTNAME
+  717  path
+  718  SHELL
+  719  echo $SHELL
+  720  ls -il
+  721  ls -il .*
+  722  ls 
+  723  ls -l
+  724  chmod 744 exercise2
+  725  ls -l
+  726  ls -il
+  727  ls .*
+  728  man -ls
+  729  man ls
+  730  ls -d
+  731  ls -dl
+  732  ls --help
+  733  :q
+  734  ls -lidA
+  735  ls -liA
+  736  ls -A
+  737  ls -d.*
+  738  ls -d .*
+  739  ls -dl .*
+  740  ls .*
+  741  ls
+  742  df -h
+  743  ls $HOME
+  744  ls /etc/
+  745  ls /etc/ > etc.dir
+  746  ls
+  747  ls etc.dir
+  748  cat etc.dir 
+  749  ls
+  750  rm etc.dir 
+  751  ls
+  752  ps
+  753  grep -n 'word' .
+  754  grep -r 'word' .
+  755  grep -r 'kernel' .
+  756  ls -rl
+  757  ls -ril
+  758  ls -irl
+  759  more exercise2
+  760  more exercise_1
+  761  ls
+  762  cd exercise2
+  763  ls
+  764  ls exercise_2 
+  765  more exercise_2 
+  766  ls -ad *
+  767  ls -ad 
+  768  exit
+  769  ls -ad .*
+  770  cat .profile
+  771  env
+  772  echo $HOSTNAME
+  773  echo $SHELL
+  774  alias ls='ls -iR'
+  775  ls
+  776  unalias
+  777  unalias ls
+  778  history
+  779  diff .bashrc .profile
+  780  echo $HOME
+  781  ls /etc/ > etc.dir
+  782  ls
+  783  cp etc.dir etc.dir2
+  784  cat etc.dir2
+  785  tar -cvf myhome.tar .
+  786  tar -tf myhome.tar 
+  787  ls -l
+  788  ls -lh
+  789  tar -cvjf myhome.tar.bz2 myhome.tar 
+  790  ls -lh
+  791  tar -f myhome.tar --delete ./etc.dir
+  792  find ~ -name vi.\* 2>/dev/null 
+  793  find ~ -name vi.\* 
+  794  find ~ -name vi_.\* 
+  795  find ~ -name vi_ .\* 
+  796  find ~ -name vi_????????? .\* 
+  797  find ~ -name vi_?????????
+  798  find ~ -name vi.\*
+  799  find ~ -name vi.*
+  800  find ~ -name vi .\*
+  801  find ~ -name vi.\* -print
+  802  find ~ -type d -name 'kernel'
+  803  exit
+  804  find / -type f -perm -a+w -name vi.\* -print 2>/dev/null
+  805  find / -type f -perm -a+w -name vi .\* -print 2>/dev/null
+  806  find / -type f -perm -a+w -name vi.Work1.txt .\* -print 2>/dev/null
+  807  find / -type f -perm -a+R -name vi.Work1.txt .\* -print 2>/dev/null
+  808  find / -type f -perm -a+R -name txt .\* -print 2>/dev/null
+  809  find / -type f -perm -a+R -name .\* -print 2>/dev/null
+  810  find / -type f -perm -a+R -name  .\* -print 2>/dev/null
+  811  find . -type f -perm -a+R -name  .\* -print 2>/dev/null
+  812  ls
+  813  more exercise_3
+  814  script exercise3
+  815  ls
+  816  rm exercise3 myhome.tar myhome.tar.bz2 script.sh etc.dir2 etc.dir
+  817  ls
+  818  clear
+  819  ls -ad
+  820  ls -ad .*
+  821  script exercise3
+  822  more exercise_3
+  823  :clear
+  824  grep -ri 'kernel' ~
+  825  find . -type d   
+  826  ps
+  827  ps xu
+  828  find / -type f -perm -a+w 
+  829  find / -type f -perm -a+w 2>/dev/null 
+  830  find / -type f -perm -a+w 2>/dev/null | tee w_file
+  831  ls
+  832  tar -cvjf w_file.tar.bz2 w_file
+  833  ls
+  834  exit
+  835  ls -ad *
+  836  ls -ad .*
+  837  cat .profile
+  838  env
+  839  echo $HOSTNAME
+  840  echo $SHELL
+  841  alias ls='ls -iR'
+  842  ls
+  843  unalias ls
+  844  history
+  845  diff .bashrc .profile
+  846  echo $HOME
+  847  ls /etc/ < etc.dir
+  848  ls
+  849  ls /etc/
+  850  ls /etc/< etc.dir
+  851  ls /etc > etc.dir
+  852  ls
+  853  cp etc.dir  etc.dir2
+  854  cat etc.dir2
+  855  clear
+  856  exit
+  857  clear
+  858  ls
+  859  script exercise3
+  860  ls
+  861  more exercise3
+  862  ls
+  863  rm exercise_3
+  864  rm exercise3
+  865  rm etc.dir etc.dir2 myhome.tar myhome.tar.bz2  w_file w_file.tar.bz2 
+  866  ls
+  867  clear
+  868  script exercise_3
+  869  logout
+  870  tar -cvf home.tar ~
+  871  ls
+  872  tar -tf home.tar 
+  873  tar -cvjf home.tar.bzip2 home.tar 
+  874  ls
+  875  tar -f home.tar --delete exercise_1
+  876  tar -f home.tar --delete home/nathiya/exercise_1
+  877  ls
+  878  tar -tf home.tar 
+  879  find . -name vi
+  880  find . -name vi_
+  881  find . -name vi_?????????
+  882  find . -name vi.\*
+  883  find . -name vi. \ *
+  884  find . -name vi .\*
+  885  grep -ri 'kernel' ~
+  886  find . -type d 
+  887  find . -type f -perm -a+w 2 > /dev/null 
+  888  find . -type f -perm -a+w 2> /dev/null 
+  889  find . -type f -perm -a+w 
+  890  find . -type f -perm -a+w |tee w_file | tar -cvjf w_file.tar.bzip2 w_file
+  891  find . -type f -perm -a+w |tee w_file | tar -cvjf w_file.tar.bz2 w_file
+  892  ps xu
+  893  exit
+  894  script exercise_3
+  895  more exercise_3
+  896  clear
+  897  more exercise_3
+  898  ls -ad .*
+  899  cat .profile
+  900  env
+  901  echo $HOSTNAME
+  902  echo $SHELL
+  903  alias ls='ls -iR'
+  904  ls
+  905  unalias ls
+  906  history
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ diff .bashrc .profile 
+1,52c1,15
+< # ~/.bashrc: executed by bash(1) for non-login shells.
+< # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+< # for examples
+< 
+< # If not running interactively, don't do anything
+< [ -z "$PS1" ] && return
+< 
+< # don't put duplicate lines or lines starting with space in the history.
+< # See bash(1) for more options
+< HISTCONTROL=ignoreboth
+< 
+< # append to the history file, don't overwrite it
+< shopt -s histappend
+< 
+< # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+< HISTSIZE=1000
+< HISTFILESIZE=2000
+< 
+< # check the window size after each command and, if necessary,
+< # update the values of LINES and COLUMNS.
+< shopt -s checkwinsize
+< 
+< # If set, the pattern "**" used in a pathname expansion context will
+< # match all files and zero or more directories and subdirectories.
+< #shopt -s globstar
+< 
+< # make less more friendly for non-text input files, see lesspipe(1)
+< [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+< 
+< # set variable identifying the chroot you work in (used in the prompt below)
+< if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+<     debian_chroot=$(cat /etc/debian_chroot)
+< fi
+< 
+< # set a fancy prompt (non-color, unless we know we "want" color)
+< case "$TERM" in
+<     xterm-color) color_prompt=yes;;
+< esac
+< 
+< # uncomment for a colored prompt, if the terminal has the capability; turned
+< # off by default to not distract the user: the focus in a terminal window
+< # should be on the output of commands, not on the prompt
+< #force_color_prompt=yes
+< 
+< if [ -n "$force_color_prompt" ]; then
+<     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+< 	# We have color support; assume it's compliant with Ecma-48
+< 	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+< 	# a case would tend to support setf rather than setaf.)
+< 	color_prompt=yes
+<     else
+< 	color_prompt=
+---
+> # ~/.profile: executed by the command interpreter for login shells.
+> # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+> # exists.
+> # see /usr/share/doc/bash/examples/startup-files for examples.
+> # the files are located in the bash-doc package.
+> 
+> # the default umask is set in /etc/profile; for setting the umask
+> # for ssh logins, install and configure the libpam-umask package.
+> #umask 022
+> 
+> # if running bash
+> if [ -n "$BASH_VERSION" ]; then
+>     # include .bashrc if it exists
+>     if [ -f "$HOME/.bashrc" ]; then
+> 	. "$HOME/.bashrc"
+56,106c19,21
+< if [ "$color_prompt" = yes ]; then
+<     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+< else
+<     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+< fi
+< unset color_prompt force_color_prompt
+< 
+< # If this is an xterm set the title to user@host:dir
+< case "$TERM" in
+< xterm*|rxvt*)
+<     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+<     ;;
+< *)
+<     ;;
+< esac
+< 
+< # enable color support of ls and also add handy aliases
+< if [ -x /usr/bin/dircolors ]; then
+<     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+<     alias ls='ls --color=auto'
+<     #alias dir='dir --color=auto'
+<     #alias vdir='vdir --color=auto'
+< 
+<     alias grep='grep --color=auto'
+<     alias fgrep='fgrep --color=auto'
+<     alias egrep='egrep --color=auto'
+< fi
+< 
+< # some more ls aliases
+< alias ll='ls -alF'
+< alias la='ls -A'
+< alias l='ls -CF'
+< 
+< # Add an "alert" alias for long running commands.  Use like so:
+< #   sleep 10; alert
+< alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+< 
+< # Alias definitions.
+< # You may want to put all your additions into a separate file like
+< # ~/.bash_aliases, instead of adding them here directly.
+< # See /usr/share/doc/bash-doc/examples in the bash-doc package.
+< 
+< if [ -f ~/.bash_aliases ]; then
+<     . ~/.bash_aliases
+< fi
+< 
+< # enable programmable completion features (you don't need to enable
+< # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+< # sources /etc/bash.bashrc).
+< if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+<     . /etc/bash_completion
+---
+> # set PATH so it includes user's private bin if it exists
+> if [ -d "$HOME/bin" ] ; then
+>     PATH="$HOME/bin:$PATH"
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ echo $HOME
+/home/nathiya
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ ls /etc/ > etc.dir
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ cp etc.dir etc.dir2
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ cat etc.dir2
+ConsoleKit
+X11
+adduser.conf
+alternatives
+apache2
+apm
+apparmor
+apparmor.d
+apt
+avahi
+bash.bashrc
+bash_completion.d
+bindresvport.blacklist
+blkid.conf
+blkid.tab
+bonobo-activation
+ca-certificates
+ca-certificates.conf
+calendar
+console-setup
+cron.d
+cron.daily
+cron.hourly
+cron.monthly
+cron.weekly
+crontab
+crouton
+dbus-1
+debconf.conf
+debian_chroot
+debian_version
+default
+deluser.conf
+depmod.d
+dhcp
+dpkg
+drirc
+environment
+fonts
+fstab
+fstab.d
+fuse.conf
+gai.conf
+gconf
+gnome-vfs-2.0
+groff
+group
+group-
+gshadow
+gshadow-
+gtk-2.0
+gtk-3.0
+hdparm.conf
+host.conf
+hosts
+hosts.allow
+hosts.deny
+i3
+init
+init.d
+initramfs-tools
+inputrc
+insserv
+insserv.conf
+insserv.conf.d
+iproute2
+issue
+issue.net
+java-7-openjdk
+javascript-common
+kbd
+kernel
+ld.so.cache
+ld.so.conf
+ld.so.conf.d
+ldap
+legal
+lighttpd
+locale.alias
+localtime
+logcheck
+login.defs
+logrotate.conf
+logrotate.d
+lsb-base
+lsb-base-logging.sh
+lsb-release
+magic
+magic.mime
+mailcap
+mailcap.order
+manpath.config
+mime.types
+mke2fs.conf
+modprobe.d
+modules
+motd
+mtab
+mtools.conf
+mysql
+network
+networks
+newt
+nologin
+nsswitch.conf
+opt
+os-release
+pam.conf
+pam.d
+passwd
+passwd-
+perl
+polkit-1
+ppp
+profile
+profile.d
+protocols
+pulse
+python
+python2.7
+rc.local
+rc0.d
+rc1.d
+rc2.d
+rc3.d
+rc4.d
+rc5.d
+rc6.d
+rcS.d
+resolv.conf
+resolvconf
+rmt
+rpc
+rsyslog.conf
+rsyslog.d
+securetty
+security
+services
+sgml
+shadow
+shadow-
+shells
+skel
+sound
+ssl
+sudoers
+sudoers.d
+sysctl.conf
+sysctl.d
+systemd
+terminfo
+timezone
+ucf.conf
+udev
+update-motd.d
+upstart-xsessions
+vim
+vtrgb
+wgetrc
+xdg
+xml
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ tar -cvf home.tar ~
+tar: Removing leading `/' from member names
+/home/nathiya/
+/home/nathiya/.viminfo
+/home/nathiya/.bashrc
+/home/nathiya/exercise2/
+/home/nathiya/exercise2/myname.txt
+/home/nathiya/exercise2/vi_Work2.txt
+/home/nathiya/exercise2/vi_Work1.txt
+/home/nathiya/exercise2/dir.log
+tar: Removing leading `/' from hard link targets
+/home/nathiya/exercise2/vi_mywork2
+/home/nathiya/exercise2/mylog
+/home/nathiya/exercise2/vi_Work3.txt
+/home/nathiya/exercise2/exercise_2
+/home/nathiya/etc.dir2
+/home/nathiya/.pulse/
+/home/nathiya/.pulse/default.pa
+/home/nathiya/.Xauthority
+/home/nathiya/.xscreensaver
+/home/nathiya/etc.dir
+/home/nathiya/.bash_logout
+/home/nathiya/exercise_3
+/home/nathiya/.ipython/
+/home/nathiya/.ipython/README
+/home/nathiya/.ipython/profile_default/
+/home/nathiya/.ipython/profile_default/history.sqlite
+/home/nathiya/.ipython/profile_default/pid/
+/home/nathiya/.ipython/profile_default/db/
+/home/nathiya/.ipython/profile_default/security/
+/home/nathiya/.ipython/profile_default/log/
+/home/nathiya/.ipython/profile_default/startup/
+/home/nathiya/.ipython/profile_default/startup/README
+/home/nathiya/c/
+/home/nathiya/c/helloworld.c
+/home/nathiya/c/GuessNumber.c
+/home/nathiya/c/.hello.c.swp
+/home/nathiya/c/a.out
+/home/nathiya/intro2linux/
+/home/nathiya/intro2linux/vi_Work1.txt
+/home/nathiya/intro2linux/homework1/
+/home/nathiya/intro2linux/homework1/exercise_1
+/home/nathiya/Downloads/
+/home/nathiya/Downloads/cprog.c
+/home/nathiya/Downloads/hello.c
+/home/nathiya/Downloads/crouton
+/home/nathiya/Downloads/exercise_1
+/home/nathiya/Downloads/vi_Work2.txt
+/home/nathiya/Downloads/wmpChrome.crx
+/home/nathiya/Downloads/vi_Work1.txt
+/home/nathiya/Downloads/vi_Work3.txt
+tar: /home/nathiya/home.tar: file is the archive; not dumped
+/home/nathiya/.profile
+/home/nathiya/exercise_1
+/home/nathiya/.bash_history
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ ls
+Downloads  c  etc.dir  etc.dir2  exercise2  exercise_1	exercise_3  home.tar  intro2linux
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ lstar -cvf home.tar ~                   tar -cvjf home.tar  .bz2 home.tar 
+home.tar
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ tar -tf home.tar
+home/nathiya/
+home/nathiya/.viminfo
+home/nathiya/.bashrc
+home/nathiya/exercise2/
+home/nathiya/exercise2/myname.txt
+home/nathiya/exercise2/vi_Work2.txt
+home/nathiya/exercise2/vi_Work1.txt
+home/nathiya/exercise2/dir.log
+home/nathiya/exercise2/vi_mywork2
+home/nathiya/exercise2/mylog
+home/nathiya/exercise2/vi_Work3.txt
+home/nathiya/exercise2/exercise_2
+home/nathiya/etc.dir2
+home/nathiya/.pulse/
+home/nathiya/.pulse/default.pa
+home/nathiya/.Xauthority
+home/nathiya/.xscreensaver
+home/nathiya/etc.dir
+home/nathiya/.bash_logout
+home/nathiya/exercise_3
+home/nathiya/.ipython/
+home/nathiya/.ipython/README
+home/nathiya/.ipython/profile_default/
+home/nathiya/.ipython/profile_default/history.sqlite
+home/nathiya/.ipython/profile_default/pid/
+home/nathiya/.ipython/profile_default/db/
+home/nathiya/.ipython/profile_default/security/
+home/nathiya/.ipython/profile_default/log/
+home/nathiya/.ipython/profile_default/startup/
+home/nathiya/.ipython/profile_default/startup/README
+home/nathiya/c/
+home/nathiya/c/helloworld.c
+home/nathiya/c/GuessNumber.c
+home/nathiya/c/.hello.c.swp
+home/nathiya/c/a.out
+home/nathiya/intro2linux/
+home/nathiya/intro2linux/vi_Work1.txt
+home/nathiya/intro2linux/homework1/
+home/nathiya/intro2linux/homework1/exercise_1
+home/nathiya/Downloads/
+home/nathiya/Downloads/cprog.c
+home/nathiya/Downloads/hello.c
+home/nathiya/Downloads/crouton
+home/nathiya/Downloads/exercise_1
+home/nathiya/Downloads/vi_Work2.txt
+home/nathiya/Downloads/wmpChrome.crx
+home/nathiya/Downloads/vi_Work1.txt
+home/nathiya/Downloads/vi_Work3.txt
+home/nathiya/.profile
+home/nathiya/exercise_1
+home/nathiya/.bash_history
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ tar -f home.tar --deleter  home/nathiya/exercise_1
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ [Kfind . -name vi
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ find . -name vi??????????
+./exercise2/vi_Work2.txt
+./exercise2/vi_Work1.txt
+./exercise2/vi_Work3.txt
+./intro2linux/vi_Work1.txt
+./Downloads/vi_Work2.txt
+./Downloads/vi_Work1.txt
+./Downloads/vi_Work3.txt
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ grep -ri 'kerne; l' .
+[35m[K./exercise2/vi_Work2.txt[m[K[36m[K:[m[K59	The Linux [01;31m[Kkernel[m[K source code is released under the GPL.  Please see the
+[35m[K./exercise2/vi_Work2.txt[m[K[36m[K:[m[K62	contact a lawyer, and do not ask on the Linux [01;31m[Kkernel[m[K mailing list.  The
+[35m[K./exercise2/vi_Work1.txt[m[K[36m[K:[m[K1	HOWTO do Linux [01;31m[Kkernel[m[K development
+[35m[K./exercise2/vi_Work1.txt[m[K[36m[K:[m[K5	instructions on how to become a Linux [01;31m[Kkernel[m[K developer and how to learn
+[35m[K./exercise2/vi_Work1.txt[m[K[36m[K:[m[K6	to work with the Linux [01;31m[Kkernel[m[K development community.  It tries to not
+[35m[K./exercise2/vi_Work1.txt[m[K[36m[K:[m[K7	contain anything related to the technical aspects of [01;31m[Kkernel[m[K programming,
+[35m[K./exercise2/vi_mywork2[m[K[36m[K:[m[K59	The Linux [01;31m[Kkernel[m[K source code is released under the GPL.  Please see the
+[35m[K./exercise2/vi_mywork2[m[K[36m[K:[m[K62	contact a lawyer, and do not ask on the Linux [01;31m[Kkernel[m[K mailing list.  The
+[35m[K./exercise2/vi_Work3.txt[m[K[36m[K:[m[K8	An IRQ number is a [01;31m[Kkernel[m[K identifier used to talk about a hardware
+[35m[K./etc.dir2[m[K[36m[K:[m[K[01;31m[Kkernel[m[K
+[35m[K./etc.dir[m[K[36m[K:[m[K[01;31m[Kkernel[m[K
+[35m[K./exercise_3[m[K[36m[K:[m[K  755  grep -r '[01;31m[Kkernel[m[K' .
+[35m[K./exercise_3[m[K[36m[K:[m[K  802  find ~ -type d -name '[01;31m[Kkernel[m[K'
+[35m[K./exercise_3[m[K[36m[K:[m[K  824  grep -ri '[01;31m[Kkernel[m[K' ~
+[35m[K./exercise_3[m[K[36m[K:[m[K  885  grep -ri '[01;31m[Kkernel[m[K' ~
+[35m[K./exercise_3[m[K[36m[K:[m[K  755  grep -r '[01;31m[Kkernel[m[K' .
+[35m[K./exercise_3[m[K[36m[K:[m[K  802  find ~ -type d -name '[01;31m[Kkernel[m[K'
+[35m[K./exercise_3[m[K[36m[K:[m[K  824  grep -ri '[01;31m[Kkernel[m[K' ~
+[35m[K./exercise_3[m[K[36m[K:[m[K  885  grep -ri '[01;31m[Kkernel[m[K' ~
+[35m[K./exercise_3[m[K[36m[K:[m[K[01;31m[Kkernel[m[K
+[35m[K./intro2linux/vi_Work1.txt[m[K[36m[K:[m[K1	HOWTO do Linux [01;31m[Kkernel[m[K development
+[35m[K./intro2linux/vi_Work1.txt[m[K[36m[K:[m[K5	instructions on how to become a Linux [01;31m[Kkernel[m[K developer and how to learn
+[35m[K./intro2linux/vi_Work1.txt[m[K[36m[K:[m[K6	to work with the Linux [01;31m[Kkernel[m[K development community.  It tries to not
+[35m[K./intro2linux/vi_Work1.txt[m[K[36m[K:[m[K7	contain anything related to the technical aspects of [01;31m[Kkernel[m[K programming,
+[35m[K./Downloads/vi_Work2.txt[m[K[36m[K:[m[K59	The Linux [01;31m[Kkernel[m[K source code is released under the GPL.  Please see the
+[35m[K./Downloads/vi_Work2.txt[m[K[36m[K:[m[K62	contact a lawyer, and do not ask on the Linux [01;31m[Kkernel[m[K mailing list.  The
+[35m[K./Downloads/vi_Work1.txt[m[K[36m[K:[m[K1	HOWTO do Linux [01;31m[Kkernel[m[K development
+[35m[K./Downloads/vi_Work1.txt[m[K[36m[K:[m[K5	instructions on how to become a Linux [01;31m[Kkernel[m[K developer and how to learn
+[35m[K./Downloads/vi_Work1.txt[m[K[36m[K:[m[K6	to work with the Linux [01;31m[Kkernel[m[K development community.  It tries to not
+[35m[K./Downloads/vi_Work1.txt[m[K[36m[K:[m[K7	contain anything related to the technical aspects of [01;31m[Kkernel[m[K programming,
+[35m[K./Downloads/vi_Work3.txt[m[K[36m[K:[m[K8	An IRQ number is a [01;31m[Kkernel[m[K identifier used to talk about a hardware
+Binary file ./home.tar matches
+[35m[K./.bash_history[m[K[36m[K:[m[Kgrep -r '[01;31m[Kkernel[m[K' .
+[35m[K./.bash_history[m[K[36m[K:[m[Kfind ~ -type d -name '[01;31m[Kkernel[m[K'
+[35m[K./.bash_history[m[K[36m[K:[m[Kgrep -ri '[01;31m[Kkernel[m[K' ~
+[35m[K./.bash_history[m[K[36m[K:[m[Kgrep -ri '[01;31m[Kkernel[m[K' ~
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ file - type d .
+
+/dev/stdin:    very short file (no magic)
+type: ERROR: cannot open `type' (No such file or directory)
+d:    ERROR: cannot open `d' (No such file or directory)
+.:    directory
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ file - type d .[1@.[1@ - [1Ptype d . 
+file: invalid option -- 't'
+file: invalid option -- 'y'
+Usage: file [-bchikLlNnprsvz0] [--apple] [--mime-encoding] [--mime-type]
+            [-e testname] [-F separator] [-f namefile] [-m magicfiles] file ...
+       file -C [-m magicfiles]
+       file [--help]
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ file . -type d *
+file: invalid option -- 't'
+file: invalid option -- 'y'
+Usage: file [-bchikLlNnprsvz0] [--apple] [--mime-encoding] [--mime-type]
+            [-e testname] [-F separator] [-f namefile] [-m magicfiles] file ...
+       file -C [-m magicfiles]
+       file [--help]
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ file . -type d * [1P[1P[1P[1@i[1@n[1@f
+bash: finf: command not found
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ finf . -type d [1P[1@d
+.
+./exercise2
+./.pulse
+./.ipython
+./.ipython/profile_default
+./.ipython/profile_default/pid
+./.ipython/profile_default/db
+./.ipython/profile_default/security
+./.ipython/profile_default/log
+./.ipython/profile_default/startup
+./c
+./intro2linux
+./intro2linux/homework1
+./Downloads
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ file / -type f -perm -a+w 2  >/dev/null | tee wi_file | tar -cvjf wi_file.tar.bz2 wi_file
+wi_file
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ [Kls
+Downloads  c  etc.dir  etc.dir2  exercise2  exercise_1	exercise_3  home.tar  home.tar.bz2  intro2linux  wi_file  wi_file.tar.bz2
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ ps xu
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+nathiya    834  3.4  7.6 1010732 150288 ?      Ssl  Jul01  63:25 /opt/google/chrome/chrome --ppapi-flash-path=/opt/google/chrome/pepper/libpepflashpl
+nathiya    871  0.0  0.0 237328   684 ?        S    Jul01   0:00 /opt/google/chrome/chrome --type=zygote --enable-logging --log-level=1 --vmodule=scr
+nathiya    905  0.0  0.0  33088   220 ?        S    Jul01   0:00 /opt/google/chrome/nacl_helper
+nathiya    908  0.0  0.0 270112   568 ?        S    Jul01   0:00 /opt/google/chrome/chrome --type=zygote --enable-logging --log-level=1 --vmodule=scr
+nathiya    927  1.9  2.2 491336 44544 ?        Sl   Jul01  35:10 /opt/google/chrome/chrome --type=gpu-process --channel=834.0.1424051514 --enable-log
+nathiya    939  0.0  0.0 166104   436 ?        S    Jul01   0:00 /opt/google/chrome/chrome --type=gpu-broker                                        
+nathiya   2893  0.0  0.0   9616   244 pts/7    Ss   Jul02   0:00 /bin/bash /usr/bin/crosh
+nathiya   2970  0.0  0.0   9616    84 pts/7    S    Jul02   0:00 /bin/bash /usr/bin/crosh
+nathiya   2971  0.0  0.0  11440  1056 pts/7    S+   Jul02   0:00 /bin/bash -l
+nathiya  10219  1.6  9.4 972420 185524 ?       Rl   Jul01  29:33 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  10252  0.7  9.1 1748680 179756 ?      Sl   Jul01  13:01 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  10352  0.0  0.4 702552  7948 ?        Sl   Jul01   0:10 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  11675  0.5  3.7 949120 72940 ?        Sl   Jul02   3:55 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  12187  0.0  0.0   9616   224 pts/5    Ss   Jul02   0:00 /bin/bash /usr/bin/crosh
+nathiya  12273  0.0  0.0   9616    72 pts/5    S    Jul02   0:00 /bin/bash /usr/bin/crosh
+nathiya  12274  0.0  0.0  11440   244 pts/5    S    Jul02   0:00 /bin/bash -l
+nathiya  12752  0.6  1.1 964068 22500 ?        Sl   Jul02   4:39 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  12899  0.0  0.2 636576  5216 ?        Sl   Jul02   0:01 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  15156  0.0  0.0  48640     8 pts/5    S    Jul02   0:00 su - nathiya
+nathiya  15169  0.0  0.0  18188     8 pts/5    S    Jul02   0:00 -su
+nathiya  15327  0.7  5.8 799612 115048 ?       Sl   Jul01  13:07 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  15344  0.0  1.2 617124 24708 ?        Sl   Jul01   1:02 /opt/google/chrome/chrome --type=ppapi --channel=834.30.460774960 --vmodule=screen_l
+nathiya  15706  0.0  0.3 681692  7428 ?        Sl   Jul01   0:06 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  15817  0.0  0.0   9616   212 pts/0    Ss+  Jul01   0:00 /bin/bash /usr/bin/crosh
+nathiya  21718  0.3  1.3 791948 27488 ?        Sl   Jul02   0:21 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  22354  0.0  0.0   9616   292 pts/8    Ss+  Jul02   0:00 /bin/bash /usr/bin/crosh
+nathiya  23551  0.0  0.0  14792     8 pts/5    S+   Jul02   0:00 script exercise_3
+nathiya  23552  0.0  0.0  14796     8 pts/5    S+   Jul02   0:00 script exercise_3
+nathiya  23553  0.0  0.0  18184     8 pts/6    Ss+  Jul02   0:00 bash -i
+nathiya  24116  0.0  0.1   9616  2404 pts/9    Ss   00:18   0:00 /bin/bash /usr/bin/crosh
+nathiya  24718  0.4  0.5 1114868 10192 ?       Sl   Jul02   2:22 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  24927  0.0  0.0   9616  1176 pts/9    S    00:33   0:00 /bin/bash /usr/bin/crosh
+nathiya  24928  0.0  0.1  11440  2200 pts/9    S    00:33   0:00 /bin/bash -l
+nathiya  25124  0.0  0.0  48640  1724 pts/9    S    00:33   0:00 su - nathiya
+nathiya  25137  0.0  0.1  18200  2168 pts/9    S    00:33   0:00 -su
+nathiya  25174  0.0  0.0  14792   836 pts/9    S+   00:36   0:00 script exercise_3
+nathiya  25175  0.0  0.0  14796   512 pts/9    S+   00:36   0:00 script exercise_3
+nathiya  25176  0.0  0.1  18204  2200 pts/10   Ss   00:36   0:00 bash -i
+nathiya  25366  0.0  0.0  15276  1156 pts/10   R+   00:46   0:00 ps xu
+nathiya  27218  0.0  0.0   9616   220 pts/1    Ss+  Jul01   0:00 /bin/bash /usr/bin/crosh
+nathiya  27302  0.0  0.0   9616   220 pts/2    Ss+  Jul01   0:00 /bin/bash /usr/bin/crosh
+nathiya  27396  0.0  0.0   9616   220 pts/3    Ss+  Jul01   0:00 /bin/bash /usr/bin/crosh
+nathiya  27469  0.0  0.0   9616   220 pts/4    Ss+  Jul01   0:00 /bin/bash /usr/bin/crosh
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ !cat   !
+ps xu
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+nathiya    834  3.4  7.6 1010732 150272 ?      Ssl  Jul01  63:25 /opt/google/chrome/chrome --ppapi-flash-path=/opt/google/chrome/pepper/libpepflashpl
+nathiya    871  0.0  0.0 237328   684 ?        S    Jul01   0:00 /opt/google/chrome/chrome --type=zygote --enable-logging --log-level=1 --vmodule=scr
+nathiya    905  0.0  0.0  33088   220 ?        S    Jul01   0:00 /opt/google/chrome/nacl_helper
+nathiya    908  0.0  0.0 270112   568 ?        S    Jul01   0:00 /opt/google/chrome/chrome --type=zygote --enable-logging --log-level=1 --vmodule=scr
+nathiya    927  1.9  2.2 491336 44544 ?        Sl   Jul01  35:10 /opt/google/chrome/chrome --type=gpu-process --channel=834.0.1424051514 --enable-log
+nathiya    939  0.0  0.0 166104   436 ?        S    Jul01   0:00 /opt/google/chrome/chrome --type=gpu-broker                                        
+nathiya   2893  0.0  0.0   9616   244 pts/7    Ss   Jul02   0:00 /bin/bash /usr/bin/crosh
+nathiya   2970  0.0  0.0   9616    84 pts/7    S    Jul02   0:00 /bin/bash /usr/bin/crosh
+nathiya   2971  0.0  0.0  11440  1056 pts/7    S+   Jul02   0:00 /bin/bash -l
+nathiya  10219  1.6  9.4 972420 185532 ?       Rl   Jul01  29:34 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  10252  0.7  9.1 1748680 180024 ?      Sl   Jul01  13:02 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  10352  0.0  0.4 702552  7948 ?        Sl   Jul01   0:10 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  11675  0.5  3.7 949120 72940 ?        Sl   Jul02   3:55 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  12187  0.0  0.0   9616   224 pts/5    Ss   Jul02   0:00 /bin/bash /usr/bin/crosh
+nathiya  12273  0.0  0.0   9616    72 pts/5    S    Jul02   0:00 /bin/bash /usr/bin/crosh
+nathiya  12274  0.0  0.0  11440   244 pts/5    S    Jul02   0:00 /bin/bash -l
+nathiya  12752  0.6  1.1 964068 22504 ?        Sl   Jul02   4:39 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  12899  0.0  0.2 636576  5216 ?        Sl   Jul02   0:01 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  15156  0.0  0.0  48640     8 pts/5    S    Jul02   0:00 su - nathiya
+nathiya  15169  0.0  0.0  18188     8 pts/5    S    Jul02   0:00 -su
+nathiya  15327  0.7  5.8 799612 115048 ?       Sl   Jul01  13:07 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  15344  0.0  1.2 617124 24708 ?        Sl   Jul01   1:02 /opt/google/chrome/chrome --type=ppapi --channel=834.30.460774960 --vmodule=screen_l
+nathiya  15706  0.0  0.3 681692  7428 ?        Sl   Jul01   0:06 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  15817  0.0  0.0   9616   212 pts/0    Ss+  Jul01   0:00 /bin/bash /usr/bin/crosh
+nathiya  21718  0.3  1.3 791948 27496 ?        Sl   Jul02   0:21 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  22354  0.0  0.0   9616   292 pts/8    Ss+  Jul02   0:00 /bin/bash /usr/bin/crosh
+nathiya  23551  0.0  0.0  14792     8 pts/5    S+   Jul02   0:00 script exercise_3
+nathiya  23552  0.0  0.0  14796     8 pts/5    S+   Jul02   0:00 script exercise_3
+nathiya  23553  0.0  0.0  18184     8 pts/6    Ss+  Jul02   0:00 bash -i
+nathiya  24116  0.0  0.1   9616  2404 pts/9    Ss   00:18   0:00 /bin/bash /usr/bin/crosh
+nathiya  24718  0.4  0.5 1114868 10192 ?       Sl   Jul02   2:22 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  24927  0.0  0.0   9616  1176 pts/9    S    00:33   0:00 /bin/bash /usr/bin/crosh
+nathiya  24928  0.0  0.1  11440  2200 pts/9    S    00:33   0:00 /bin/bash -l
+nathiya  25124  0.0  0.0  48640  1724 pts/9    S    00:33   0:00 su - nathiya
+nathiya  25137  0.0  0.1  18200  2168 pts/9    S    00:33   0:00 -su
+nathiya  25174  0.0  0.0  14792   836 pts/9    S+   00:36   0:00 script exercise_3
+nathiya  25175  0.0  0.0  14796   512 pts/9    S+   00:36   0:00 script exercise_3
+nathiya  25176  0.0  0.1  18204  2200 pts/10   Ss   00:36   0:00 bash -i
+nathiya  25371  0.0  0.0  15276  1156 pts/10   R+   00:46   0:00 ps xu
+nathiya  27218  0.0  0.0   9616   220 pts/1    Ss+  Jul01   0:00 /bin/bash /usr/bin/crosh
+nathiya  27302  0.0  0.0   9616   220 pts/2    Ss+  Jul01   0:00 /bin/bash /usr/bin/crosh
+nathiya  27396  0.0  0.0   9616   220 pts/3    Ss+  Jul01   0:00 /bin/bash /usr/bin/crosh
+nathiya  27469  0.0  0.0   9616   220 pts/4    Ss+  Jul01   0:00 /bin/bash /usr/bin/crosh
+]0;(precise)nathiya@localhost: ~(precise)nathiya@localhost:~$ exit
+exit
+
+Script done on Fri Jul  3 00:47:02 2015

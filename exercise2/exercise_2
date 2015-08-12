@@ -1,0 +1,127 @@
+Script started on Tue Jun 30 15:17:49 2015
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ ls -ail
+total 32
+132322 drwxrwxrwx 2 nathiya nathiya 4096 Jun 30 15:05 [0m[34;42m.[0m
+130092 drwxr-xr-x 7 nathiya nathiya 4096 Jun 30 14:55 [01;34m..[0m
+145368 -rwxrwxrwx 1 nathiya nathiya   69 Jun 30 14:56 [01;32mdir.log[0m
+131316 -rwxrwxrwx 1 nathiya nathiya    0 Jun 30 15:17 [01;32mexercise_2[0m
+145634 -rwxrwxrwx 1 nathiya nathiya   69 Jun 30 15:05 [01;32mmylog[0m
+138533 -rwxrwxrwx 1 nathiya nathiya    8 Jun 30 14:50 [01;32mmyname.txt[0m
+135341 -rwxrwxrwx 1 nathiya nathiya  596 Jun 30 14:38 [01;32mvi_Work1.txt[0m
+136043 -rwxrwxrwx 1 nathiya nathiya  571 Jun 30 14:38 [01;32mvi_Work2.txt[0m
+137306 -rwxrwxrwx 1 nathiya nathiya 1041 Jun 30 14:38 [01;32mvi_Work3.txt[0m
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ chmod 744 ./
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ ls chmod 744 ./            ls -ail[3Pexitls -ail
+total 32
+132322 drwxr--r-- 2 nathiya nathiya 4096 Jun 30 15:05 [0m[01;34m.[0m
+130092 drwxr-xr-x 7 nathiya nathiya 4096 Jun 30 14:55 [01;34m..[0m
+145368 -rwxrwxrwx 1 nathiya nathiya   69 Jun 30 14:56 [01;32mdir.log[0m
+131316 -rwxrwxrwx 1 nathiya nathiya    0 Jun 30 15:17 [01;32mexercise_2[0m
+145634 -rwxrwxrwx 1 nathiya nathiya   69 Jun 30 15:05 [01;32mmylog[0m
+138533 -rwxrwxrwx 1 nathiya nathiya    8 Jun 30 14:50 [01;32mmyname.txt[0m
+135341 -rwxrwxrwx 1 nathiya nathiya  596 Jun 30 14:38 [01;32mvi_Work1.txt[0m
+136043 -rwxrwxrwx 1 nathiya nathiya  571 Jun 30 14:38 [01;32mvi_Work2.txt[0m
+137306 -rwxrwxrwx 1 nathiya nathiya 1041 Jun 30 14:38 [01;32mvi_Work3.txt[0m
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ ls -ail[Kls -ail[3Pexitchmod u+rwx .       -R go+rx   -W wx l / ./
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ chmod -R go-wx ./[10Pls -ail
+total 32
+132322 drwxr--r-- 2 nathiya nathiya 4096 Jun 30 15:05 [0m[01;34m.[0m
+130092 drwxr-xr-x 7 nathiya nathiya 4096 Jun 30 14:55 [01;34m..[0m
+145368 -rwxr--r-- 1 nathiya nathiya   69 Jun 30 14:56 [01;32mdir.log[0m
+131316 -rwxr--r-- 1 nathiya nathiya    0 Jun 30 15:17 [01;32mexercise_2[0m
+145634 -rwxr--r-- 1 nathiya nathiya   69 Jun 30 15:05 [01;32mmylog[0m
+138533 -rwxr--r-- 1 nathiya nathiya    8 Jun 30 14:50 [01;32mmyname.txt[0m
+135341 -rwxr--r-- 1 nathiya nathiya  596 Jun 30 14:38 [01;32mvi_Work1.txt[0m
+136043 -rwxr--r-- 1 nathiya nathiya  571 Jun 30 14:38 [01;32mvi_Work2.txt[0m
+137306 -rwxr--r-- 1 nathiya nathiya 1041 Jun 30 14:38 [01;32mvi_Work3.txt[0m
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ ln -s vi_Work3.txt vi_mywork3
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ ls
+[0m[01;32mdir.log[0m  [01;32mexercise_2[0m  [01;32mmylog[0m  [01;32mmyname.txt[0m  [01;32mvi_Work1.txt[0m  [01;32mvi_Work2.txt[0m  [01;32mvi_Work3.txt[0m  [01;36mvi_mywork3[0m
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ ls -il vi_          ls -il | grep vi_
+vi_Work1.txt  vi_Work2.txt  vi_Work3.txt  vi_mywork3    
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ ls -il | grep vi_Work2 3.txt vi_Work    mywork3 
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ ls -il | grep vi_Work3.txt vi_mywork3 [1@-[1@e[1@ vi_Work3.txt [1@ [1@-[1@e
+137306 -rwxr--r-- 1 nathiya nathiya 1041 Jun 30 14:38 [01;31m[Kvi_Work3.txt[m[K
+145636 lrwxrwxrwx 1 nathiya nathiya   12 Jun 30 15:22 [01;31m[Kvi_mywork3[m[K -> [01;31m[Kvi_Work3.txt[m[K
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ ln vi_Work2.txt m vi_mywork2
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ ls
+[0m[01;32mdir.log[0m  [01;32mexercise_2[0m  [01;32mmylog[0m  [01;32mmyname.txt[0m  [01;32mvi_Work1.txt[0m  [01;32mvi_Work2.txt[0m  [01;32mvi_Work3.txt[0m  [01;32mvi_mywork2[0m  [01;36mvi_mywork3[0m
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ lsn vi_Work2.txt vi_mywork2s -il | grep -e vi_Work3.txt -e vi_mywork3 3[1P[1@2.txt -e vi_mywork3[1P 2 
+136043 -rwxr--r-- 2 nathiya nathiya  571 Jun 30 14:38 [01;31m[Kvi_Work2.txt[m[K
+136043 -rwxr--r-- 2 nathiya nathiya  571 Jun 30 14:38 [01;31m[Kvi_mywork2[m[K
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ chmod 744 vi_Work1.txt 
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ ls -ail   o il
+total 32
+145368 -rwxr--r-- 1 nathiya nathiya   69 Jun 30 14:56 [0m[01;32mdir.log[0m
+131316 -rwxr--r-- 1 nathiya nathiya 4096 Jun 30 15:27 [01;32mexercise_2[0m
+145634 -rwxr--r-- 1 nathiya nathiya   69 Jun 30 15:05 [01;32mmylog[0m
+138533 -rwxr--r-- 1 nathiya nathiya    8 Jun 30 14:50 [01;32mmyname.txt[0m
+135341 -rwxr--r-- 1 nathiya nathiya  596 Jun 30 14:38 [01;32mvi_Work1.txt[0m
+136043 -rwxr--r-- 2 nathiya nathiya  571 Jun 30 14:38 [01;32mvi_Work2.txt[0m
+137306 -rwxr--r-- 1 nathiya nathiya 1041 Jun 30 14:38 [01;32mvi_Work3.txt[0m
+136043 -rwxr--r-- 2 nathiya nathiya  571 Jun 30 14:38 [01;32mvi_mywork2[0m
+145636 lrwxrwxrwx 1 nathiya nathiya   12 Jun 30 15:22 [01;36mvi_mywork3[0m -> [01;32mvi_Work3.txt[0m
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ ls -ilchmod 744 vi_Work1.txt [1P[1@1
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ chmod 714 vi_Work1.txt ls -il[K
+total 32
+145368 -rwxr--r-- 1 nathiya nathiya   69 Jun 30 14:56 [0m[01;32mdir.log[0m
+131316 -rwxr--r-- 1 nathiya nathiya 4096 Jun 30 15:27 [01;32mexercise_2[0m
+145634 -rwxr--r-- 1 nathiya nathiya   69 Jun 30 15:05 [01;32mmylog[0m
+138533 -rwxr--r-- 1 nathiya nathiya    8 Jun 30 14:50 [01;32mmyname.txt[0m
+135341 -rwx--xr-- 1 nathiya nathiya  596 Jun 30 14:38 [01;32mvi_Work1.txt[0m
+136043 -rwxr--r-- 2 nathiya nathiya  571 Jun 30 14:38 [01;32mvi_Work2.txt[0m
+137306 -rwxr--r-- 1 nathiya nathiya 1041 Jun 30 14:38 [01;32mvi_Work3.txt[0m
+136043 -rwxr--r-- 2 nathiya nathiya  571 Jun 30 14:38 [01;32mvi_mywork2[0m
+145636 lrwxrwxrwx 1 nathiya nathiya   12 Jun 30 15:22 [01;36mvi_mywork3[0m -> [01;32mvi_Work3.txt[0m
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ ps xu
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+nathiya    791  2.5  7.4 943316 147056 ?       Ssl  Jun29  24:54 /opt/google/chrome/chrome --ppapi-flash-path=/opt/google/chrome/pepper/libpepflashpl
+nathiya    809  0.0  0.0 237328  1732 ?        S    Jun29   0:00 /opt/google/chrome/chrome --type=zygote --enable-logging --log-level=1 --vmodule=scr
+nathiya    852  0.0  0.0  33088   344 ?        S    Jun29   0:00 /opt/google/chrome/nacl_helper
+nathiya    884  0.0  0.0 270112  1056 ?        S    Jun29   0:00 /opt/google/chrome/chrome --type=zygote --enable-logging --log-level=1 --vmodule=scr
+nathiya    929  1.6  1.8 418196 37072 ?        Sl   Jun29  16:08 /opt/google/chrome/chrome --type=gpu-process --channel=791.0.1390284033 --enable-log
+nathiya    941  0.0  0.0 166104   684 ?        S    Jun29   0:00 /opt/google/chrome/chrome --type=gpu-broker                                        
+nathiya   5791  0.6 21.7 1873860 427224 ?      Sl   Jun29   5:54 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya   5922  1.0  6.3 826932 125864 ?       Sl   Jun29   9:59 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya   5969  0.3  3.6 745296 72736 ?        Rl   Jun29   3:07 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya   5979  0.4  4.3 741020 86460 ?        Sl   Jun29   4:24 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya   5990  0.2  8.2 988544 163016 ?       Sl   Jun29   2:21 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya   5995  0.0  1.0 660584 21524 ?        Sl   Jun29   0:34 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya   6129  0.0  0.6 636008 13556 ?        Sl   Jun29   0:00 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya   6213  0.1  1.0 617692 20152 ?        Sl   Jun29   0:58 /opt/google/chrome/chrome --type=ppapi --channel=791.30.1442850652 --vmodule=screen_
+nathiya   7220  0.0  1.1 678188 22196 ?        Sl   Jun29   0:02 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  13156  0.0  0.0   9616   316 pts/0    Ss   10:51   0:00 /bin/bash /usr/bin/crosh
+nathiya  13248  0.0  0.0   9616   104 pts/0    S    10:51   0:00 /bin/bash /usr/bin/crosh
+nathiya  13249  0.0  0.0  11440   336 pts/0    S    10:51   0:00 /bin/bash -l
+nathiya  13585  0.0  0.0  48640     8 pts/0    S    10:52   0:00 su - nathiya
+nathiya  13598  0.0  0.0  18132   992 pts/0    S    10:52   0:00 -su
+nathiya  13697  0.0  2.9 774108 58156 ?        Sl   10:53   0:12 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  20798  0.6  0.7 628892 15464 ?        Sl   12:06   1:24 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  21446  0.7  1.5 1022468 29652 ?       Sl   13:41   0:47 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  30006  0.0  0.0   9616  1192 pts/2    Ss   14:52   0:00 /bin/bash /usr/bin/crosh
+nathiya  30083  0.0  0.0   9616   856 pts/2    S    14:52   0:00 /bin/bash /usr/bin/crosh
+nathiya  30084  0.0  0.0  11440  1412 pts/2    S+   14:52   0:00 /bin/bash -l
+nathiya  30717  0.7  6.8 820064 134160 ?       Sl   15:15   0:06 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  30761  0.5  4.6 704688 92264 ?        Sl   15:15   0:04 /opt/google/chrome/chrome --type=renderer --enable-logging --log-level=1 --use-gl=eg
+nathiya  30830  0.0  0.0  14792   836 pts/0    S+   15:17   0:00 script exercise_2
+nathiya  30831  0.0  0.0  14796   512 pts/0    S+   15:17   0:00 script exercise_2
+nathiya  30832  0.0  0.1  18144  2116 pts/1    Ss   15:17   0:00 bash -i
+nathiya  31467  0.0  0.0  15276  1156 pts/1    R+   15:30   0:00 ps xu
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ rm vi-m  _mywork3 
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ s ls
+[0m[01;32mdir.log[0m  [01;32mexercise_2[0m  [01;32mmylog[0m  [01;32mmyname.txt[0m  [01;32mvi_Work1.txt[0m  [01;32mvi_Work2.txt[0m  [01;32mvi_Work3.txt[0m  [01;32mvi_mywork2[0m
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ chmoad  d -R a+  777 ./
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ ls -il
+total 36
+145368 -rwxrwxrwx 1 nathiya nathiya   69 Jun 30 14:56 [0m[01;32mdir.log[0m
+131316 -rwxrwxrwx 1 nathiya nathiya 8192 Jun 30 15:30 [01;32mexercise_2[0m
+145634 -rwxrwxrwx 1 nathiya nathiya   69 Jun 30 15:05 [01;32mmylog[0m
+138533 -rwxrwxrwx 1 nathiya nathiya    8 Jun 30 14:50 [01;32mmyname.txt[0m
+135341 -rwxrwxrwx 1 nathiya nathiya  596 Jun 30 14:38 [01;32mvi_Work1.txt[0m
+136043 -rwxrwxrwx 2 nathiya nathiya  571 Jun 30 14:38 [01;32mvi_Work2.txt[0m
+137306 -rwxrwxrwx 1 nathiya nathiya 1041 Jun 30 14:38 [01;32mvi_Work3.txt[0m
+136043 -rwxrwxrwx 2 nathiya nathiya  571 Jun 30 14:38 [01;32mvi_mywork2[0m
+]0;(precise)nathiya@localhost: ~/exercise2(precise)nathiya@localhost:~/exercise2$ exit
+exit
+
+Script done on Tue Jun 30 15:33:13 2015

@@ -1,0 +1,12 @@
+1	HOWTO do Linux kernel development
+2	---------------------------------
+3	
+4	This is the be-all, end-all document on this topic.  It contains
+5	instructions on how to become a Linux kernel developer and how to learn
+6	to work with the Linux kernel development community.  It tries to not
+7	contain anything related to the technical aspects of kernel programming,
+8	but will help point you in the right direction for that.
+9	
+10	If anything in this document becomes out of date, please send in patches
+11	to the maintainer of this file, who is listed at the bottom of the
+12	document.
